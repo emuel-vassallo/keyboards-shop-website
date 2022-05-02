@@ -4,6 +4,10 @@ header {
   background-color: #ededed;
 }
 
+#icon {
+  margin-left: 32px;
+}
+
 #right-icons {
   display: flex;
   justify-content: right;
