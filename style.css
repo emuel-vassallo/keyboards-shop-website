@@ -22,13 +22,14 @@ header {
   padding: 0;
 }
 
-#right-icons button {
+header button {
   border: none;
+  cursor: pointer;
 }
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
 .icon:hover {
-  filter: invert(39%) sepia(0%) saturate(1641%) hue-rotate(250deg) brightness(93%) contrast(95%);
+  filter: invert(30%) sepia(0%) saturate(1641%) hue-rotate(250deg) brightness(93%) contrast(95%);
 }
 
 
