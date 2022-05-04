@@ -2,43 +2,86 @@
 <html lang="en">
   <head>
     <title>Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <button><img id= "menu-icon" class="icon" src="images/icons/menu.svg" alt="menu icon"></button>
-      <h1 id="logo">Keyboards</h1>
-      <ul id="right-icons">
-        <li><button><img class="icon" src="images/icons/search.svg" alt="search icon"></button></li>
-        <li><button><img class="icon" src="images/icons/user.svg" alt="user profile icon"></button></li>
-        <li><button><img class="icon" src="images/icons/shopping-cart.svg" alt="shopping cart icon"></button></li>
+      <button class="header-item" id="menu-button">
+        <img
+          id="menu-icon"
+          class="icon"
+          src="images/icons/menu.svg"
+          alt="menu icon"
+        />
+      </button>
+      <h1 class="header-item" id="logo">Keyboards</h1>
+      <ul class="header-item" id="right-icons">
+        <li>
+          <button>
+            <img class="icon" src="images/icons/search.svg" alt="search icon" />
+          </button>
+        </li>
+        <li>
+          <button>
+            <img
+              class="icon"
+              src="images/icons/user.svg"
+              alt="user profile icon"
+            />
+          </button>
+        </li>
+        <li>
+          <button>
+            <img
+              class="icon"
+              src="images/icons/shopping-cart.svg"
+              alt="shopping cart icon"
+            />
+          </button>
+        </li>
       </ul>
     </header>
     <main>
-      <div id="gallery"> <!-- TODO: replace with jQuery gallery plugin -->
-        <img src="https://havit-nordic.com/wp-content/uploads/2020/12/kb473lbanner.jpg">
+      <div class="carousel" data-flickity>
+        <div class="carousel-cell">
+          <img src="images/gallery/gmk-universe.webp" />
+        </div>
+        <div class="carousel-cell">
+          <img src="images/gallery/macaron.webp" />
+        </div>
+        <div class="carousel-cell">
+          <img src="images/gallery/mountain-deskmat.webp" />
+        </div>
       </div>
+      <script src="script.js"></script>
       <div class="products">
         <div class="product">
-          <img src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg">
+          <img
+            src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg"
+          />
           <p class="product-name">iGK64</p>
           <p class="product-price">€100.00</p>
         </div>
         <div class="product">
-          <img src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg">
+          <img
+            src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg"
+          />
           <p class="product-name">iGK64</p>
           <p class="product-price">€100.00</p>
         </div>
         <div class="product">
-          <img src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg">
+          <img
+            src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg"
+          />
           <p class="product-name">iGK64</p>
           <p class="product-price">€100.00</p>
         </div>
         <div class="product">
-          <img src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg">
+          <img
+            src="https://www.epathbuy.com/wp-content/uploads/2017/10/DSC08956.jpg"
+          />
           <p class="product-name">iGK64</p>
           <p class="product-price">€100.00</p>
         </div>
