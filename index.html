@@ -5,12 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
-    <link
-      href="jQuery/flickity-master/dist/flickity.min.css"
-      rel="stylesheet"
-    />
-    <script src="jQuery/flickity-master/dist/flickity.pkgd.min.js"></script>
+    <link href="jQuery/flickity.min.css" rel="stylesheet" />
+    <script src="jQuery/flickity.pkgd.min.js"></script>
   </head>
+
   <body>
     <header>
       <button class="header-item" id="menu-button">
@@ -51,20 +49,12 @@
     <main>
       <div
         class="carousel"
-        data-flickity='{ "autoPlay": true, "contain": true, "wrapAround": true }'
+        data-flickity='{ "autoPlay": true, "lazyLoad": true, "contain": true, "wrapAround": true }'
       >
-        <div class="carousel-cell">
-          <img src="images/gallery/gmk-universe.webp" />
-        </div>
-        <div class="carousel-cell">
-          <img src="images/gallery/macaron.webp" />
-        </div>
-        <div class="carousel-cell">
-          <img src="images/gallery/mountain-deskmat.webp" />
-        </div>
-        <div class="carousel-cell">
-          <img src="images/gallery/ergodox.webp" />
-        </div>
+        <img class="carousel-cell" src="images/gallery/phaseone.webp" />
+        <img class="carousel-cell" src="images/gallery/kbd75.webp" />
+        <img class="carousel-cell" src="images/gallery/mountain-deskmat.webp" />
+        <img class="carousel-cell" src="images/gallery/tofu60.webp" />
       </div>
       <script src="script.js"></script>
       <div class="products">
