@@ -8,27 +8,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/flickity.min.css" media="screen" />
     <script src="js/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/pushy.min.css" media="screen" />
   </head>
   <body>
+    <!-- Pushy Menu -->
     <nav class="pushy pushy-left">
-      <ul>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="pushy-content">
+        <ul>
+          <li class="pushy-link"><a href="products.html">Products</a></li>
+          <li class="pushy-link"><a href="gallery.html">Gallery</a></li>
+          <li class="pushy-link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+    <!-- Site Overlay -->
     <div class="site-overlay"></div>
-    <header>
-      <button class="menu-btn header-item" id="menu-button">
+    <header class="push">
+      <button class="menu-btn header-item">
         <img
           id="menu-icon"
           class="icon"
           src="img/icons/menu.svg"
           alt="menu icon"
         />
-        <a href="gallery.html">Gallery</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
       </button>
       <h1 class="header-item" id="logo">Keyboards</h1>
       <ul class="header-item" id="right-icons">
@@ -57,7 +59,7 @@
         </li>
       </ul>
     </header>
-    <main>
+    <main class="push">
       <div class="carousel">
         <img class="carousel-cell" src="img/gallery/phaseone.webp" />
         <img class="carousel-cell" src="img/gallery/kbd75.webp" />
@@ -96,6 +98,7 @@
       </div>
       <script src="js/script.js"></script>
     </main>
-    <footer>By Emuel Vassallo</footer>
+    <footer class="push">By Emuel Vassallo</footer>
+    <script src="js/pushy.min.js"></script>
   </body>
 </html>

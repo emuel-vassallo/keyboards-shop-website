@@ -5,19 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/pushy.min.css" media="screen" />
   </head>
   <body>
-    <header>
-      <button class="header-item" id="menu-button">
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left">
+      <div class="pushy-content">
+        <ul>
+          <li class="pushy-link"><a href="index.html">Home</a></li>
+          <li class="pushy-link"><a href="products.html">Products</a></li>
+          <li class="pushy-link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+    <header class="push">
+      <button class="menu-btn header-item">
         <img
           id="menu-icon"
           class="icon"
           src="img/icons/menu.svg"
           alt="menu icon"
         />
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
       </button>
       <h1 class="header-item" id="logo">Keyboards</h1>
       <ul class="header-item" id="right-icons">
@@ -46,5 +58,7 @@
         </li>
       </ul>
     </header>
+    <footer class="push">By Emuel Vassallo</footer>
+    <script src="js/pushy.min.js"></script>
   </body>
 </html>

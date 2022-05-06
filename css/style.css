@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +7,18 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+nav {
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style-type: none;
+  margin: 16px 20px;
 }
 
 header {
@@ -24,7 +37,7 @@ header {
   margin: 0;
 }
 
-#menu-button {
+.menu-btn {
   justify-content: left;
   margin-right: auto;
 }
