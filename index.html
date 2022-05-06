@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>Home - Keyboards</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
-    <link href="jQuery/flickity.min.css" rel="stylesheet" />
-    <script src="jQuery/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+      media="screen"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </head>
-
   <body>
     <header>
       <button class="header-item" id="menu-button">
@@ -18,6 +22,9 @@
           src="images/icons/menu.svg"
           alt="menu icon"
         />
+        <a href="gallery.html">Gallery</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
       </button>
       <h1 class="header-item" id="logo">Keyboards</h1>
       <ul class="header-item" id="right-icons">
@@ -47,16 +54,12 @@
       </ul>
     </header>
     <main>
-      <div
-        class="carousel"
-        data-flickity='{ "autoPlay": true, "lazyLoad": true, "contain": true, "wrapAround": true }'
-      >
+      <div class="carousel">
         <img class="carousel-cell" src="images/gallery/phaseone.webp" />
         <img class="carousel-cell" src="images/gallery/kbd75.webp" />
         <img class="carousel-cell" src="images/gallery/mountain-deskmat.webp" />
         <img class="carousel-cell" src="images/gallery/tofu60.webp" />
       </div>
-      <script src="script.js"></script>
       <div class="products">
         <div class="product">
           <img
@@ -87,6 +90,7 @@
           <p class="product-price">€100.00</p>
         </div>
       </div>
+      <script src="script.js"></script>
     </main>
     <footer>By Emuel Vassallo</footer>
   </body>
