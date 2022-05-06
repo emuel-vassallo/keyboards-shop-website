@@ -60,29 +60,53 @@ header button {
   object-fit: cover;
 }
 
-form {
+/* Contact Us */
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+#form-container form {
   display: flex;
   flex-direction: column;
   width: 50%;
+  min-width: 200px;
+  max-width: 600px;
 }
 
-form label {
+#form-container label {
   margin-top: 26px;
 }
 
-input {
+#form-container input {
   margin-top: 8px;
+  height: 30px;
+  background-color: #fdfdfd;
+  border: 1px solid black;
 }
 
-form #comment {
-  padding: 50px 0;
+#form-container #comment {
+  min-width: 100%;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 400px;
+  height: 200px;
+  margin-top: 8px;
+  background-color: #fdfdfd;
+  border: 1px solid black;
 }
 
-#send-button {
-  width: 100px;
-  height: 28px;
-  text-align: center;
-  margin-top: 22px;
+#form-container button {
+  width: 108px;
+  height: 32px;
+  margin-top: 26px;
   cursor: pointer;
+  background-color: #6f6f6f;
+  color: white;
+  border: none;
+  font-weight: bold;
 }
-
