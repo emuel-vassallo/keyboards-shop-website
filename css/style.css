@@ -68,13 +68,14 @@ header button {
   cursor: pointer;
 }
 
+/* Home  */
+
 .carousel-cell {
   width: 100%;
   height: 700px;
   object-fit: cover;
 }
 
-/* Home page products */
 .products {
   display: flex;
   margin: 100px;
@@ -104,6 +105,7 @@ header button {
 }
 
 /* Gallery */
+
 .gallery {
   display: grid;
   justify-content: center;
@@ -115,22 +117,21 @@ header button {
   row-gap: 32px;
 }
 
-.gallery a img{
+.gallery a img {
   width: 420px;
   height: 420px;
   object-fit: cover;
   object-position: center;
 }
 
-/* Contact Us page */
+/* Contact Us */
 
 #form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
-  /* TODO: make footer go to the bottom */
+  margin: 64px 0;
 }
 
 #form-container form {
@@ -139,6 +140,10 @@ header button {
   width: 50%;
   min-width: 200px;
   max-width: 600px;
+}
+
+#form-container h1 {
+  margin-top: 0;
 }
 
 #form-container label {
