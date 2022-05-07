@@ -121,9 +121,9 @@ header button {
 
 /* Products */
 
-#categories {
+.categories {
   display: flex;
-  background-color: #fafafa;
+  background-color: #f0f0f0;
   height: 80px;
   justify-content: center;
   align-items: center;
@@ -132,18 +132,39 @@ header button {
   gap: 42px;
 }
 
-#categories li {
+.categories li {
   list-style-type: none;
 }
 
-#categories a {
+.categories a {
   text-decoration: none;
   color: #767676;
 }
 
-#categories a:hover {
+.categories a:hover {
   color: #323232;
 }
+
+#keyboards #link-keyboards {
+  color: #323232;
+  font-weight: 600;
+}
+
+#keycaps #link-keycaps {
+  color: #323232;
+  font-weight: 600;
+}
+
+#switches #link-switches {
+  color: #323232;
+  font-weight: 600;
+}
+
+#cables #link-cables {
+  color: #323232;
+  font-weight: 600;
+}
+
 /* Contact Us */
 
 #form-container {
