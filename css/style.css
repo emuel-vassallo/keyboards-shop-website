@@ -124,7 +124,7 @@ header button {
 .categories {
   display: flex;
   background-color: #f0f0f0;
-  height: 80px;
+  height: 85px;
   justify-content: center;
   align-items: center;
   margin: 0;
