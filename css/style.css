@@ -99,9 +99,9 @@ nav li {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 420px));
-  margin: 100px 70px;
-  padding-top: 36px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+  margin: 100px 100px;
+  padding-top: 32px;
   gap: 70px;
   justify-content: center;
 }
