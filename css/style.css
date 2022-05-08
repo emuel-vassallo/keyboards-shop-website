@@ -11,6 +11,10 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  background-color: #fafafa;
+}
+
 /* Header/Footer */
 
 header,
