@@ -28,6 +28,10 @@ footer {
   padding: 0px 3%;
 }
 
+footer a {
+  color: #4c4c4c;
+}
+
 .header-item {
   flex: 1;
   display: flex;
