@@ -11,14 +11,7 @@ body {
   box-sizing: border-box;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  list-style-type: none;
-  margin: 27px 20px;
-}
+/* Header/Footer */
 
 header,
 footer {
@@ -37,11 +30,6 @@ footer {
   margin: 0;
 }
 
-.menu-btn {
-  justify-content: left;
-  margin-right: auto;
-}
-
 #logo {
   flex: 1;
   display: flex;
@@ -58,6 +46,31 @@ footer {
 header button {
   border: none;
   background-color: #ebebeb;
+}
+
+/* Navigation Menu */
+
+.menu-btn {
+  justify-content: left;
+  margin-right: auto;
+}
+
+nav ul {
+  margin: 0;
+  padding: 15px 0;
+}
+nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 1px 5px;
+}
+
+.pushy-link:hover{
+  background-color: #2e2e2e;
+}
+
+.selected-page {
+  background-color: #2a2a2a;
 }
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
