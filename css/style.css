@@ -15,6 +15,10 @@ main {
   background-color: #fafafa;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Header/Footer */
 
 header,
@@ -82,7 +86,6 @@ nav li {
 .icon:hover {
   filter: invert(60%) sepia(0%) saturate(1500%) hue-rotate(250deg)
     brightness(90%) contrast(90%);
-  cursor: pointer;
 }
 
 /* Home  */
@@ -110,11 +113,11 @@ nav li {
 .product-name {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 
 .product-price {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* Gallery */
@@ -168,6 +171,32 @@ nav li {
   font-weight: 600;
 }
 
+.product-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.product-buttons button {
+  height: 33px;
+  width: 100%;
+}
+
+.button-add-to-cart {
+  border: none;
+  background-color: #4c4c4c;
+  color: white;
+}
+
+.button-info {
+  background-color: white;
+  border: 1px solid #4c4c4c;
+}
+
+.button-add-to-cart:hover {
+  background-color: #5c5c5c;
+}
+
 /* Contact Us */
 
 #form-container {
@@ -216,7 +245,6 @@ nav li {
   width: 108px;
   height: 32px;
   margin-top: 26px;
-  cursor: pointer;
   background-color: #6f6f6f;
   color: white;
   border: none;
