@@ -163,8 +163,7 @@ nav li {
 }
 
 .categories a:hover {
-  font-weight: 600;
-  color: #929292;
+  color: #9f9f9f;
 }
 
 .selected-category {
