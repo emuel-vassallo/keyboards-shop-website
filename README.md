@@ -1,8 +1,8 @@
 # Website Design Home Assignment
 
-This project required us to create a website about a fictional company that offers any items or services using HTML, CSS, and JavaScript.
+This assignment required us to create a website about a fictional company that offers any products or services using HTML, CSS, and JavaScript.
 
-It needed to include four pages: home, products/services, gallery, and contact information.
+It needed to include four pages: home, products/services, gallery, and contact.
 
 [View via GitHub](https://emuel-vassallo.github.io/keyboards-shop-website/)
 
