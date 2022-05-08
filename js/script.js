@@ -4,3 +4,7 @@ $('.carousel').flickity({
   wrapAround: true,
   lazyLoad: true,
 });
+
+function addToCart() {
+  alert("Product was added to cart.")
+}
