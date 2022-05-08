@@ -197,6 +197,17 @@ nav li {
   background-color: #efefef;
 }
 
+.image-float {
+  -webkit-transition: margin 0.3s ease-out;
+  -moz-transition: margin 0.3s ease-out;
+  -o-transition: margin 0.3s ease-out;
+}
+
+.image-float:hover {
+  cursor: pointer;
+  margin: 8px;
+}
+
 /* Contact Us */
 
 #form-container {
