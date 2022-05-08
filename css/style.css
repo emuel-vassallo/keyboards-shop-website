@@ -196,6 +196,10 @@ nav li {
   background-color: #5c5c5c;
 }
 
+.button-info:hover {
+  background-color: #efefef;
+}
+
 /* Contact Us */
 
 #form-container {
