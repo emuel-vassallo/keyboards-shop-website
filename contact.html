@@ -16,9 +16,13 @@
       <div class="pushy-content">
         <ul>
           <li class="pushy-link"><a href="index.html">Home</a></li>
-          <li class="pushy-link"><a href="products/keyboards.html">Products</a></li>
+          <li class="pushy-link">
+            <a href="products/keyboards.html">Products</a>
+          </li>
           <li class="pushy-link"><a href="gallery.html">Gallery</a></li>
-          <li class="pushy-link selected-page"><a href="contact.html">Contact</a></li>
+          <li class="pushy-link selected-page">
+            <a href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -59,22 +63,24 @@
         </li>
       </ul>
     </header>
-    <main  class="push" id="form-container">
+    <main class="push" id="contact-form">
       <h1>Contact Us</h1>
-      <form>
+      <form action="mailto:emuel.vassallo.g52404@mcast.edu.mt" method="GET">
         <label for="full-name">Full Name</label>
-        <input id="full-name" type="text" name="full-name"></input>
+        <input type="text" name="full-name" id="full-name" />
 
         <label for="email-address">Email Address</label>
-        <input id="email-address" type="text" name="email-address"></input>
+        <input type="text" name="email-address" id="email-address" />
 
         <label for="contact-number">Contact Number</label>
-        <input id="contact-number"  type="text" name="contact-number"></input>
+        <input type="text" name="contact-number" id="full-name" />
 
-        <label for="Comment">Comment</label>
-        <textarea id="comment" name="comment"></textarea>
-        <button>Send</button>
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment"></textarea>
+
+        <button type="submit">Submit</button>
       </form>
+      <script src="js/script.js"></script>
     </main>
     <footer class="push">
       <div>
