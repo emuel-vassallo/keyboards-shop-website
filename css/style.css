@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fafafa;
+  justify-content: space-between;
 }
 
 * {
@@ -18,14 +19,23 @@ button {
 
 /* Header/Footer */
 
-header,
-footer {
+header {
   display: flex;
   grid-template-columns: 1fr auto 1fr;
   height: 100px;
   background-color: #eaeaea;
   align-items: center;
   padding: 0px 3%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100px;
+  background-color: #eaeaea;
+  align-items: center;
+  justify-content: center;
 }
 
 footer a {
@@ -232,7 +242,16 @@ nav li {
   margin: 54px 0;
 }
 
-#contact-form form {
+#contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form h1 {
+  margin-top: 0;
+}
+
+#form {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -240,15 +259,11 @@ nav li {
   max-width: 600px;
 }
 
-#contact-form h1 {
-  margin-top: 0;
-}
-
 #contact-form label {
-  margin-top: 26px;
+  margin-top: 30px;
 }
 
-#contact-form input {
+#form input {
   margin-top: 8px;
   height: 30px;
   background-color: #fdfdfd;
@@ -263,10 +278,10 @@ nav li {
   border: 1px solid black;
 }
 
-form button {
+#form #submit {
+  background-color: #4c4c4c;
   width: 110px;
   height: 32px;
-  background-color: #4c4c4c;
   color: white;
   border: none;
   font-weight: bold;
@@ -274,7 +289,7 @@ form button {
   margin-top: 26px;
 }
 
-form button:hover {
+#submit:hover {
   background-color: #5c5c5c;
   cursor: pointer;
 }

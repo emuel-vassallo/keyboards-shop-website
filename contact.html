@@ -65,20 +65,26 @@
     </header>
     <main class="push" id="contact-form">
       <h1>Contact Us</h1>
-      <form action="mailto:emuel.vassallo.g52404@mcast.edu.mt" method="GET">
-        <label for="full-name">Full Name</label>
-        <input type="text" name="full-name" id="full-name" />
-
-        <label for="email-address">Email Address</label>
-        <input type="text" name="email-address" id="email-address" />
-
-        <label for="contact-number">Contact Number</label>
-        <input type="text" name="contact-number" id="full-name" />
-
-        <label for="comment">Comment</label>
-        <textarea name="comment" id="comment"></textarea>
-
-        <button type="submit">Submit</button>
+      <form id="form" action="" method="post">
+        <div>
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" />
+        </div>
+        <div>
+          <label for="emailAddress">Email Address </label>
+          <input id="emailAddress" name="emailAddress" />
+        </div>
+        <div>
+          <label for="contactNumber">Contact Number</label>
+          <input id="contactNumber" name="contactNumber" />
+        </div>
+        <div>
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment"></textarea>
+        </div>
+        <div>
+          <button id="submit">Submit</button>
+        </div>
       </form>
       <script src="js/script.js"></script>
     </main>
@@ -87,6 +93,11 @@
         Website developed by
         <a href="https://github.com/emuel-vassallo">Emuel Vassallo</a>
       </div>
+<div>
+        Product photos from
+        <a href="https://kbdfans.com/">KBDFANS</a>
+      </div>
+
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.4.0/js/pushy.min.js"></script>
   </body>
