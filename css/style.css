@@ -100,15 +100,25 @@ nav li {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
-  margin: 80px 120px;
+  margin: 100px 120px;
   gap: 70px;
   justify-content: center;
+}
+
+.home .products {
+  margin: 130px 120px;
 }
 
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 15px;
+}
+
+
+.home .product {
+  margin-top: 8px;
 }
 
 .product-name {
