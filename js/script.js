@@ -17,7 +17,7 @@ $(document).ready(function () {
     let comment = $('#comment textarea').val();
 
     let isFullNameValid = false;
-    let isVEmailAddressValid = false;
+    let isEmailAddressValid = false;
     let isContactNumberValid = false;
     let isCommentValid = false;
 
