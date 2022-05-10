@@ -18,4 +18,4 @@ This is a store that offers mechanical keyboards, as well as a variety of relate
 
 - How to use jQuery plugins to create different kinds of galleries, and a sliding menu.
 - How to force an item to stay centered, despite each of it's children having different width.
-- How to have change styling for a link in a navigation bar relating to the current page.
+- How to change the styling for a link in a navigation bar relating to the current page.
