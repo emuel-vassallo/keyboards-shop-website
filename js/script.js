@@ -12,14 +12,14 @@ $(document).ready(function () {
   $('#submit').click(function () {
     let fullName = $('#fullName input').val();
     let emailAddress = $('#emailAddress input').val();
-    let contactNumber = $('#contactNumber input').val();
+    let contactNumberString = $('#contactNumber input').val();
+    let contactNumber = parseInt(contactNumberString);
     let comment = $('#comment textarea').val();
 
-    let isFormValid =
-      fullName.length > 2 &&
-      isEmail(emailAddress) &&
-      contactNumber.length >= 8 &&
-      comment.length >= 10;
+    let isFullNameValid = false;
+    let isVEmailAddressValid = false;
+    let isContactNumberValid = false;
+    let isCommentValid = false;
 
     if (fullName === '') {
       $('#fullName p').text('This is a required field.');
@@ -30,8 +30,10 @@ $(document).ready(function () {
     } else {
       $('#fullName p').text('');
       $('#fullName input').css('border', '1px solid #656565');
+      isFullNameValid = true;
     }
-    if (emailAddress === '') {
+
+    if (!emailAddress) {
       $('#emailAddress p').text('This is a required field.');
       $('#emailAddress input').css('border', '1px solid red');
     } else if (!isEmail(emailAddress)) {
@@ -40,18 +42,22 @@ $(document).ready(function () {
     } else {
       $('#emailAddress p').text('');
       $('#emailAddress input').css('border', '1px solid #656565');
+      isEmalAddressValid = true;
     }
-    if (contactNumber === '') {
+
+    if (!contactNumberString) {
       $('#contactNumber p').text('This is a required field.');
       $('#contactNumber input').css('border', '1px solid red');
-    } else if (contactNumber.length < 8) {
+    } else if (contactNumberString.length < 8 || isNaN(contactNumber)) {
       $('#contactNumber p').text('Please enter a valid contact number.');
       $('#contactNumber input').css('border', '1px solid red');
     } else {
       $('#contactNumber p').text('');
       $('#contactNumber input').css('border', '1px solid #656565');
+      isContactNumberValid = true;
     }
-    if (comment === '') {
+
+    if (!comment) {
       $('#comment p').text('This is a required field.');
       $('#comment textarea').css('border', '1px solid red');
     } else if (comment.length < 10) {
@@ -60,7 +66,14 @@ $(document).ready(function () {
     } else {
       $('#comment p').text('');
       $('#comment textarea').css('border', '1px solid #656565');
+      isCommentValid = true;
     }
+
+    let isFormValid =
+      isFullNameValid &&
+      isEmalAddressValid &&
+      isContactNumberValid &&
+      isCommentValid;
 
     if (isFormValid) {
       location.href = `mailto:?body=${comment}&to=emuel.vassallo.g52404@mcast.edu.mt`;
