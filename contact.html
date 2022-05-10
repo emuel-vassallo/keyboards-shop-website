@@ -63,27 +63,31 @@
         </li>
       </ul>
     </header>
-    <main class="push" id="contact-form">
+    <main class="push" id="contact">
       <h1>Contact Us</h1>
       <form id="form">
-        <div>
-          <label for="fullName">Full Name</label>
-          <input id="fullName" name="fullName" />
+        <div id="fullName">
+          <label for="fullName">Full Name *</label>
+          <input name="fullName" />
+          <p></p>
+        </div>
+        <div id="emailAddress">
+          <label for="emailAddress">Email Address *</label>
+          <input name="emailAddress" />
+          <p></p>
+        </div>
+        <div id="contactNumber">
+          <label for="contactNumber">Contact Number *</label>
+          <input name="contactNumber" />
+          <p></p>
+        </div>
+        <div id="comment">
+          <label for="comment">Comment *</label>
+          <textarea name="comment"></textarea>
+          <p></p>
         </div>
         <div>
-          <label for="emailAddress">Email Address </label>
-          <input id="emailAddress" name="emailAddress" />
-        </div>
-        <div>
-          <label for="contactNumber">Contact Number</label>
-          <input id="contactNumber" name="contactNumber" />
-        </div>
-        <div>
-          <label for="comment">Comment</label>
-          <textarea name="comment" id="comment"></textarea>
-        </div>
-        <div>
-          <button id="submit">Submit</button>
+          <button id="submit" type="button">Submit</button>
         </div>
       </form>
       <script src="js/script.js"></script>
@@ -93,11 +97,10 @@
         Website developed by
         <a href="https://github.com/emuel-vassallo">Emuel Vassallo</a>
       </div>
-<div>
+      <div>
         Product photos from
         <a href="https://kbdfans.com/">KBDFANS</a>
       </div>
-
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.4.0/js/pushy.min.js"></script>
   </body>
