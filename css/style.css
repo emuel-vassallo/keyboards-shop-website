@@ -28,20 +28,6 @@ header {
   padding: 0px 3%;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  height: 100px;
-  background-color: #eaeaea;
-  align-items: center;
-  justify-content: center;
-}
-
-footer a {
-  color: #4c4c4c;
-}
-
 .header-item {
   flex: 1;
   display: flex;
@@ -50,9 +36,17 @@ footer a {
 }
 
 #logo {
-  flex: 1;
-  display: flex;
   justify-content: center;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.home-link:hover {
+  filter: invert(60%) sepia(0%) saturate(1500%) hue-rotate(250deg)
+    brightness(35%) contrast(70%);
 }
 
 #right-icons {
@@ -65,6 +59,20 @@ footer a {
 header button {
   border: 0;
   background-color: #ebebeb;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100px;
+  background-color: #eaeaea;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: #4c4c4c;
 }
 
 /* Navigation Menu */
@@ -96,7 +104,7 @@ nav li {
 /* https://codepen.io/sosuke/pen/Pjoqqp */
 .icon:hover {
   filter: invert(60%) sepia(0%) saturate(1500%) hue-rotate(250deg)
-    brightness(90%) contrast(90%);
+    brightness(35%) contrast(70%);
 }
 
 /* Home  */
