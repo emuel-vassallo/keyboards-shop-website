@@ -12,7 +12,10 @@ This is a store that offers mechanical keyboards, as well as a variety of relate
 
 ## Wireframes
 
-![](img/wireframes.png)
+![](img/wireframes/home.png)
+![](img/wireframes/products.png)
+![](img/wireframes/gallery.png)
+![](img/wireframes/contact.png)
 
 ## What I Learnt
 
