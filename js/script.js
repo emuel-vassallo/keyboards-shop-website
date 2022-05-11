@@ -9,7 +9,20 @@ function isEmail(email) {
 }
 
 // TODO: Make this cleaner and more readable.
-$(document).ready(function () {
+$(document).ready(() => {
+  if ($('body.products-page').length) {
+    const modal = document.querySelector('.product-more-info');
+    const openModal = document.querySelector('.button-info');
+    const closeModal = document.querySelector('.close-button-info');
+
+    openModal.addEventListener('click', () => {
+      modal.showModal();
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.close();
+    });
+  }
   const fullNameInputField = $('#fullName input');
   const fullNameErrorField = $('#fullName p');
 
@@ -95,20 +108,20 @@ $(document).ready(function () {
     }
   }
 
-  fullNameInputField.on('input', function () {
+  fullNameInputField.on('input', () => {
     showFullNameError();
   });
-  emailAddressInputField.on('input', function () {
+  emailAddressInputField.on('input', () => {
     showEmailAddressError();
   });
-  contactNumberInputField.on('input', function () {
+  contactNumberInputField.on('input', () => {
     showContactNumberError();
   });
-  commentInputField.on('input', function () {
+  commentInputField.on('input', () => {
     showCommentError();
   });
 
-  $('#submit').click(function () {
+  $('#submit').click(() => {
     showFullNameError();
     showEmailAddressError();
     showContactNumberError();
