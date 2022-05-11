@@ -126,10 +126,12 @@ $(document).ready(function () {
     }
   });
 
-  $('.carousel').flickity({
-    autoPlay: true,
-    contain: true,
-    wrapAround: true,
-    lazyLoad: true,
-  });
+  if ($('body.home').length) {
+    $('.carousel').flickity({
+      autoPlay: true,
+      contain: true,
+      wrapAround: true,
+      lazyLoad: true,
+    });
+  }
 });
