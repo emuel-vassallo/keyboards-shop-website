@@ -3,6 +3,7 @@ function addToCart() {
 }
 
 function isEmail(email) {
+  // https://melvingeorge.me/blog/check-if-string-is-valid-email-address-javascript
   let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
 }
@@ -120,6 +121,7 @@ $(document).ready(function () {
       isCommentValid;
 
     if (isFormValid) {
+      // https://stackoverflow.com/questions/7977165/how-to-write-in-mailto-body-link-to-current-page
       location.href = `mailto:?body=${comment}&to=emuel.vassallo.g52404@mcast.edu.mt`;
     }
   });
