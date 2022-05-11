@@ -9,69 +9,113 @@ function isEmail(email) {
 
 // TODO: Make this cleaner and more readable.
 $(document).ready(function () {
-  $('#submit').click(function () {
-    let fullName = $('#fullName input').val();
-    let emailAddress = $('#emailAddress input').val();
-    let contactNumberString = $('#contactNumber input').val();
-    let contactNumber = parseInt(contactNumberString);
-    let comment = $('#comment textarea').val();
+  const fullNameInputField = $('#fullName input');
+  const fullNameErrorField = $('#fullName p');
 
-    let isFullNameValid = false;
-    let isEmailAddressValid = false;
-    let isContactNumberValid = false;
-    let isCommentValid = false;
+  const emailAddressInputField = $('#emailAddress input');
+  const emailAddressErrorField = $('#emailAddress p');
 
-    if (fullName === '') {
-      $('#fullName p').text('This is a required field.');
-      $('#fullName input').css('border', '1px solid red');
+  const contactNumberInputField = $('#contactNumber input');
+  const contactNumberErrorField = $('#contactNumber p');
+
+  const commentInputField = $('#comment textarea');
+  const commentErrorField = $('#comment p');
+
+  let isFullNameValid = false;
+  let isEmailAddressValid = false;
+  let isContactNumberValid = false;
+  let isCommentValid = false;
+
+  function showFullNameError() {
+    let fullName = fullNameInputField.val();
+    isFullNameValid = false;
+
+    if (!fullName) {
+      fullNameErrorField.text('This is a required field.');
+      fullNameInputField.css('border', '1px solid red');
     } else if (fullName.length < 3) {
-      $('#fullName p').text('Please enter a valid name.');
-      $('#fullName input').css('border', '1px solid red');
+      fullNameErrorField.text('Please enter a valid name.');
+      fullNameInputField.css('border', '1px solid red');
     } else {
-      $('#fullName p').text('');
-      $('#fullName input').css('border', '1px solid #656565');
+      fullNameErrorField.text('');
+      fullNameInputField.css('border', '1px solid #656565');
       isFullNameValid = true;
     }
+  }
 
+  function showEmailAddressError() {
+    let emailAddress = emailAddressInputField.val();
+    isEmailAddressValid = false;
     if (!emailAddress) {
-      $('#emailAddress p').text('This is a required field.');
-      $('#emailAddress input').css('border', '1px solid red');
+      emailAddressErrorField.text('This is a required field.');
+      emailAddressInputField.css('border', '1px solid red');
     } else if (!isEmail(emailAddress)) {
-      $('#emailAddress p').text('Please enter a valid email address.');
-      $('#emailAddress input').css('border', '1px solid red');
+      emailAddressErrorField.text('Please enter a valid email address.');
+      emailAddressInputField.css('border', '1px solid red');
     } else {
-      $('#emailAddress p').text('');
-      $('#emailAddress input').css('border', '1px solid #656565');
-      isEmalAddressValid = true;
+      emailAddressErrorField.text('');
+      emailAddressInputField.css('border', '1px solid #656565');
+      isEmailAddressValid = true;
     }
+  }
+
+  function showContactNumberError() {
+    let contactNumberString = contactNumberInputField.val();
+    let contactNumber = parseInt(contactNumberString);
+    isContactNumberValid = false;
 
     if (!contactNumberString) {
-      $('#contactNumber p').text('This is a required field.');
-      $('#contactNumber input').css('border', '1px solid red');
+      contactNumberErrorField.text('This is a required field.');
+      contactNumberInputField.css('border', '1px solid red');
     } else if (contactNumberString.length < 8 || isNaN(contactNumber)) {
-      $('#contactNumber p').text('Please enter a valid contact number.');
-      $('#contactNumber input').css('border', '1px solid red');
+      contactNumberErrorField.text('Please enter a valid contact number.');
+      contactNumberInputField.css('border', '1px solid red');
     } else {
-      $('#contactNumber p').text('');
-      $('#contactNumber input').css('border', '1px solid #656565');
+      contactNumberErrorField.text('');
+      contactNumberInputField.css('border', '1px solid #656565');
       isContactNumberValid = true;
     }
+  }
+
+  function showCommentError() {
+    let comment = commentInputField.val();
+    isCommentValid = false;
 
     if (!comment) {
-      $('#comment p').text('This is a required field.');
-      $('#comment textarea').css('border', '1px solid red');
+      commentErrorField.text('This is a required field.');
+      commentInputField.css('border', '1px solid red');
     } else if (comment.length < 10) {
-      $('#comment p').text('Please enter at least 10 characters.');
-      $('#comment textarea').css('border', '1px solid red');
+      commentErrorField.text('Please enter at least 10 characters.');
+      commentInputField.css('border', '1px solid red');
     } else {
-      $('#comment p').text('');
-      $('#comment textarea').css('border', '1px solid #656565');
+      commentErrorField.text('');
+      commentInputField.css('border', '1px solid #656565');
       isCommentValid = true;
     }
+  }
 
-    let isFormValid =
+  fullNameInputField.on('input', function () {
+    showFullNameError();
+  });
+  emailAddressInputField.on('input', function () {
+    showEmailAddressError();
+  });
+  contactNumberInputField.on('input', function () {
+    showContactNumberError();
+  });
+  commentInputField.on('input', function () {
+    showCommentError();
+  });
+
+  $('#submit').click(function () {
+    showFullNameError();
+    showEmailAddressError();
+    showContactNumberError();
+    showCommentError();
+
+    const isFormValid =
       isFullNameValid &&
-      isEmalAddressValid &&
+      isEmailAddressValid &&
       isContactNumberValid &&
       isCommentValid;
 
