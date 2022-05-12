@@ -219,6 +219,7 @@ nav li {
 .product-buttons button {
   height: 34px;
   width: 100%;
+  font-size: 70%;
 }
 
 .button-add-to-cart {
@@ -255,9 +256,11 @@ nav li {
   .categories {
     flex-direction: row;
     width: 100%;
-    height: 30px;
+    height: 132px;
     justify-content: center;
     align-items: center;
+    gap: 5%;
+    padding: 0;
   }
 
   .products-page main {
@@ -270,7 +273,7 @@ nav li {
   }
 
   .product {
-    width: 90%;
+    width: 70%;
     height: auto;
   }
 }
