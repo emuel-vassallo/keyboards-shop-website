@@ -6,11 +6,13 @@ It needed to include four pages: home, products/services, gallery, and contact.
 
 [View via GitHub](https://emuel-vassallo.github.io/keyboards-shop-website/)
 
-## Description of the Company
+## Proposal
+
+### Description of the Company
 
 This is a store that offers mechanical keyboards, as well as a variety of related parts and products such as switches, mousepads, and coiled cables. Its main target audience consists of keyboard hobbyists and enthusiasts, programmers, and gamers. This company's goal is to make it easier for everyone looking to buy high-quality keyboard items online.
 
-## Wireframes
+### Wireframes
 
 ![](img/wireframes/home.png)
 ![](img/wireframes/products.png)
