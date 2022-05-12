@@ -10,19 +10,6 @@ function isEmail(email) {
 
 // TODO: Make this cleaner and more readable.
 $(document).ready(() => {
-  if ($('body.products-page').length) {
-    const modal = document.querySelector('.product-more-info');
-    const openModal = document.querySelector('.button-info');
-    const closeModal = document.querySelector('.close-button-info');
-
-    openModal.addEventListener('click', () => {
-      modal.showModal();
-    });
-
-    closeModal.addEventListener('click', () => {
-      modal.close();
-    });
-  }
   const fullNameInputField = $('#fullName input');
   const fullNameErrorField = $('#fullName p');
 
