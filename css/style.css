@@ -190,18 +190,16 @@ nav li {
 
 .gallery {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
   justify-content: center;
-  align-items: center;
-  margin: 75px 0;
-  width: 100vw;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 420px));
-  column-gap: 32px;
+  margin: 75px 35px;
+  column-gap: 170px;
   row-gap: 40px;
 }
 
 .gallery a img {
-  width: 420px;
-  height: 410px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   object-position: center;
 }
