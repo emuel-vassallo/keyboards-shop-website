@@ -190,18 +190,18 @@ nav li {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-auto-rows: 400px;
+  grid-gap: 36px;
+  grid-auto-flow: dense;
+  margin: 85px 100px;
   justify-content: center;
-  margin: 75px 35px;
-  column-gap: 170px;
-  row-gap: 40px;
 }
 
 .gallery a img {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 /* Products */
@@ -431,8 +431,8 @@ nav li {
     height: 400px;
   }
 
-  .gallery a {
-    width: 30%;
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
