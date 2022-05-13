@@ -160,15 +160,9 @@ nav li {
   margin-top: 8px;
 }
 
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-
-.product-price {
-  margin: 0;
+.home-page .products {
+  grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
+  margin-top: 75px;
 }
 
 /* Gallery */
@@ -197,64 +191,41 @@ nav li {
   display: flex;
 }
 
-.categories {
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0;
-  margin: 0;
-  height: 100%;
-  width: 250px;
-  padding: 75px 60px;
-  gap: 40px;
-}
-
-.categories li {
-  list-style-type: none;
-}
-
-.categories a {
-  text-decoration: none;
-  color: #808080;
-}
-
-.categories a:hover {
-  color: #9f9f9f;
-}
-
-.selected-category {
+.product-name {
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 3px;
 }
 
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 420px));
   column-gap: 55px;
-  row-gap: 75px;
+  row-gap: 65px;
   padding: 35px;
   width: 100%;
-  justify-items: center;
   justify-content: center;
+  justify-items: center;
   margin: 15px 0 75px 0;
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 22px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-.home-page .products {
-  grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
-  margin-top: 75px;
+.product-price {
+  margin: 2px 0 0 0;
 }
-
 .product-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 19px;
+  margin-top: 26px;
 }
 
 .product-buttons button {
@@ -292,6 +263,34 @@ nav li {
 .image-float:hover {
   cursor: pointer;
   margin: 8px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  margin: 0;
+  height: 100%;
+  width: 250px;
+  padding: 75px 60px;
+  gap: 40px;
+}
+
+.categories li {
+  list-style-type: none;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #808080;
+}
+
+.categories a:hover {
+  color: #9f9f9f;
+}
+
+.selected-category {
+  font-weight: bold;
 }
 
 /* Contact Us */
@@ -399,7 +398,6 @@ nav li {
 
   .product-name {
     font-size: 95%;
-    margin-bottom: 8px;
   }
 
   .carousel-cell {
