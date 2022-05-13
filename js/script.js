@@ -47,6 +47,7 @@ $(document).ready(() => {
   function showEmailAddressError() {
     let emailAddress = emailAddressInputField.val();
     isEmailAddressValid = false;
+
     if (!emailAddress) {
       emailAddressErrorField.text('This is a required field.');
       emailAddressInputField.css('border', '1px solid red');
@@ -126,7 +127,32 @@ $(document).ready(() => {
     }
   });
 
-  if ($('body.home').length) {
+  function toggleOverlay(sidebar, overlay, body) {
+    if (sidebar.hasClass('active')) {
+      overlay.css('display', 'block');
+      body.css('overflow', 'hidden');
+    } else {
+      overlay.css('display', 'none');
+      body.css('overflow', 'visible');
+    }
+  }
+
+  $(() => {
+    let sidebar = $('.sidebar');
+    let overlay = $('.site-overlay');
+    let menuButton = $('.open-menu, .menu-button');
+    let body = $('body');
+    menuButton.on('click', () => {
+      sidebar.toggleClass('active');
+      toggleOverlay(sidebar, overlay, body);
+    });
+    overlay.on('click', () => {
+      sidebar.toggleClass('active');
+      toggleOverlay(sidebar, overlay, body);
+    });
+  });
+
+  if ($('body.home-page').length) {
     $('.carousel').flickity({
       autoPlay: true,
       contain: true,

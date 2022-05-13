@@ -4,7 +4,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
   background-color: #fafafa;
   justify-content: space-between;
 }
@@ -25,7 +26,7 @@ header {
   height: 100px;
   background-color: #eaeaea;
   align-items: center;
-  padding: 0px 3%;
+  padding: 0px 30px;
 }
 
 .header-item {
@@ -75,11 +76,59 @@ footer a {
   color: #4c4c4c;
 }
 
-/* Main Navigation Menu */
+/* Navigation Menu */
 
-.menu-btn {
-  justify-content: left;
-  margin-right: auto;
+/* https://codepen.io/juwanpetty/pen/PPyJqJ */
+.sidebar {
+  height: 100%;
+  width: 236px;
+  position: absolute;
+  left: -350px;
+  z-index: 1001;
+  background: #f0f0f0;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+}
+
+.active {
+  -webkit-transform: translateX(350px);
+  -moz-transform: translateX(350px);
+  -o-transform: translateX(350px);
+  -ms-transform: translateX(350px);
+  transform: translateX(350px);
+}
+
+.menu-button button {
+  background: transparent;
+  border: none;
+  margin: 36px 0 18px 30px;
+}
+
+.menu-links li {
+  cursor: pointer;
+}
+
+.menu-links {
+  color: black;
+  line-height: 50px;
+  transition: 0.2s;
+}
+
+.menu-items {
+  font-size: 15px;
+  padding-left: 30px;
+}
+
+.menu-items:hover {
+  background-color: #dfdfdf;
+}
+
+.selected-page {
+  background-color: #dfdfdf;
+}
+
+.selected-page:hover {
+  background-color: #cfcfcf;
 }
 
 nav ul {
@@ -91,14 +140,6 @@ nav li {
   list-style-type: none;
   margin: 0;
   padding: 0 5px;
-}
-
-.pushy-link:hover {
-  background-color: #2e2e2e;
-}
-
-.selected-page {
-  background-color: #2a2a2a;
 }
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
@@ -115,7 +156,7 @@ nav li {
   object-fit: cover;
 }
 
-.home .product {
+.home-page .product {
   margin-top: 8px;
 }
 
@@ -136,16 +177,16 @@ nav li {
   display: grid;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 75px 0;
   width: 100vw;
   grid-template-columns: repeat(auto-fill, minmax(420px, 420px));
   column-gap: 32px;
-  row-gap: 35px;
+  row-gap: 40px;
 }
 
 .gallery a img {
   width: 420px;
-  height: 420px;
+  height: 410px;
   object-fit: cover;
   object-position: center;
 }
@@ -205,7 +246,7 @@ nav li {
   height: 100%;
 }
 
-.home .products {
+.home-page .products {
   grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
   margin-top: 75px;
 }
@@ -245,6 +286,7 @@ nav li {
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
 }
 
 .image-float:hover {
@@ -325,12 +367,8 @@ nav li {
 }
 
 @media screen and (max-width: 768px) {
-  .menu-btn {
-    margin-right: 8px;
-  }
-
   #logo {
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .categories {
@@ -355,12 +393,8 @@ nav li {
   }
 
   .product {
-    width: 70%;
+    width: 90%;
     height: auto;
-  }
-
-  .products-page .product {
-    width: 100%;
   }
 
   .product-name {
@@ -371,10 +405,29 @@ nav li {
   .carousel-cell {
     height: 400px;
   }
+
+  .gallery a {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 2000px) {
   body {
     justify-content: normal;
   }
+}
+
+/* https://www.w3schools.com/howto/howto_css_overlay.asp */
+.site-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }

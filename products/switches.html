@@ -5,35 +5,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.4.0/css/pushy.min.css"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body class="push products-page">
-    <nav class="pushy pushy-left">
-      <div class="pushy-content">
-        <ul>
-          <li class="pushy-link"><a href="../index.html">Home</a></li>
-          <li class="pushy-link selected-page">
-            <a href="keyboards.html">Products</a>
+    <nav class="sidebar">
+      <div class="container">
+        <div class="menu-button">
+          <button>
+            <img src="../img/icons/menu.svg" />
+          </button>
+        </div>
+        <ul class="menu-links">
+          <li class="menu-items" onclick="window.location.href='../index.html'">
+            Home
           </li>
-          <li class="pushy-link"><a href="../gallery.html">Gallery</a></li>
-          <li class="pushy-link"><a href="../contact.html">Contact</a></li>
+          <li
+            class="menu-items selected-page"
+            onclick="window.location.href='../products/keyboards.html'"
+          >
+            Products
+          </li>
+          <li
+            class="menu-items"
+            onclick="window.location.href='../gallery.html'"
+          >
+            Gallery
+          </li>
+          <li
+            class="menu-items"
+            onclick="window.location.href='../contact.html'"
+          >
+            Contact
+          </li>
         </ul>
       </div>
     </nav>
     <div class="site-overlay"></div>
-    <header class="push">
-      <button class="menu-btn header-item">
-        <img
-          id="menu-icon"
-          class="icon"
-          src="../img/icons/menu.svg"
-          alt="menu icon"
-        />
-      </button>
+    <header>
+      <div class="header-item">
+        <button class="open-menu">
+          <img
+            id="menu-icon"
+            class="icon"
+            src="../img/icons/menu.svg"
+            alt="menu icon"
+          />
+        </button>
+      </div>
+
       <h1 class="header-item" id="logo">
         <a class="home-link" href="../index.html">Keyboards</a>
       </h1>
@@ -220,6 +239,5 @@
         <a href="https://kbdfans.com/">KBDFANS</a>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.4.0/js/pushy.min.js"></script>
   </body>
 </html>
