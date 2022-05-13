@@ -18,6 +18,21 @@ button {
   cursor: pointer;
 }
 
+/* https://www.w3schools.com/howto/howto_css_overlay.asp */
+.site-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
 /* Header/Footer */
 
 header {
@@ -26,7 +41,7 @@ header {
   height: 100px;
   background-color: #eaeaea;
   align-items: center;
-  padding: 0px 30px;
+  padding: 0px 60px;
 }
 
 .header-item {
@@ -34,6 +49,11 @@ header {
   display: flex;
   padding: 0;
   margin: 0;
+}
+
+.header-item.open-menu,
+button {
+  padding: 0;
 }
 
 #logo {
@@ -52,7 +72,7 @@ header {
 
 #right-icons {
   justify-content: right;
-  gap: 5%;
+  gap: 8%;
   list-style-type: none;
   margin-left: auto;
 }
@@ -85,7 +105,7 @@ footer a {
   position: absolute;
   left: -350px;
   z-index: 1001;
-  background: #f0f0f0;
+  background: #eaeaea;
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
 }
@@ -101,34 +121,35 @@ footer a {
 .menu-button button {
   background: transparent;
   border: none;
-  margin: 36px 0 18px 30px;
-}
-
-.menu-links li {
-  cursor: pointer;
+  padding: 36px 0 36px 42px;
 }
 
 .menu-links {
   color: black;
   line-height: 50px;
   transition: 0.2s;
+  padding-top: 0;
+}
+
+.menu-links li {
+  cursor: pointer;
 }
 
 .menu-items {
   font-size: 15px;
-  padding-left: 30px;
+  padding-left: 42px;
 }
 
 .menu-items:hover {
-  background-color: #dfdfdf;
+  background-color: #dadada;
 }
 
 .selected-page {
-  background-color: #dfdfdf;
+  background-color: #dadada;
 }
 
 .selected-page:hover {
-  background-color: #cfcfcf;
+  background-color: #cacaca;
 }
 
 nav ul {
@@ -285,12 +306,13 @@ nav li {
   color: #808080;
 }
 
-.categories a:hover {
-  color: #9f9f9f;
+.selected-category {
+  scrollbar-track-color: #626262;
+  font-weight: 600;
 }
 
-.selected-category {
-  font-weight: bold;
+.categories a:hover {
+  color: #5a5a5a;
 }
 
 /* Contact Us */
@@ -366,6 +388,10 @@ nav li {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    padding: 0px 22px;
+  }
+
   #logo {
     font-size: 23px;
   }
@@ -373,12 +399,12 @@ nav li {
   .categories {
     flex-direction: row;
     width: 100%;
-    height: 132px;
+    height: 90px;
     justify-content: center;
     align-items: center;
     gap: 5%;
     padding: 0;
-    font-size: 90%;
+    font-size: 14px;
   }
 
   .products-page main {
@@ -387,8 +413,7 @@ nav li {
 
   .products {
     grid-template-columns: repeat(auto-fill, minmax(70%, 70%));
-    row-gap: 42px;
-    margin-bottom: 35px;
+    row-gap: 54px;
   }
 
   .product {
@@ -398,6 +423,10 @@ nav li {
 
   .product-name {
     font-size: 95%;
+  }
+
+  .home-page .products {
+    row-gap: 56px;
   }
 
   .carousel-cell {
@@ -413,19 +442,4 @@ nav li {
   body {
     justify-content: normal;
   }
-}
-
-/* https://www.w3schools.com/howto/howto_css_overlay.asp */
-.site-overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
 }
