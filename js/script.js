@@ -1,11 +1,35 @@
-// https://melvingeorge.me/blog/check-if-string-is-valid-email-address-javascript
-function isEmail(email) {
-  let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
-
-// TODO: Make this cleaner and more readable.
 $(document).ready(() => {
+  $('.button-add-to-cart').on('click', () => {
+    alert('Product was added to cart.');
+  });
+
+  if ($('body').hasClass('home-page')) {
+    $('.carousel').flickity({
+      autoPlay: true,
+      contain: true,
+      wrapAround: true,
+      lazyLoad: true,
+    });
+  }
+
+  (() => {
+    let sidebar = $('.sidebar');
+    let overlay = $('.site-overlay');
+    let body = $('body');
+
+    $('.open-menu, .menu-button, .site-overlay').on('click', () => {
+      sidebar.toggleClass('active');
+
+      if (sidebar.hasClass('active')) {
+        overlay.css('display', 'block');
+        body.css('overflow', 'hidden');
+      } else {
+        overlay.css('display', 'none');
+        body.css('overflow', 'visible');
+      }
+    });
+  })();
+
   const fullNameInputField = $('#fullName input');
   const fullNameErrorField = $('#fullName p');
 
@@ -23,19 +47,33 @@ $(document).ready(() => {
   let isContactNumberValid = false;
   let isCommentValid = false;
 
+  // https://melvingeorge.me/blog/check-if-string-is-valid-email-address-javascript
+  isEmail = (email) => {
+    let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  };
+
+  function showRequiredFieldError(inputField, errorField) {
+    errorField.text('This is a required field.');
+    inputField.css('border', '1px solid red');
+  }
+
+  function restoreError(inputField, errorField) {
+    errorField.text('');
+    inputField.css('border', '1px solid #656565');
+  }
+
   function showFullNameError() {
     let fullName = fullNameInputField.val();
     isFullNameValid = false;
 
     if (!fullName) {
-      fullNameErrorField.text('This is a required field.');
-      fullNameInputField.css('border', '1px solid red');
+      showRequiredFieldError(fullNameInputField, fullNameErrorField);
     } else if (fullName.length < 3) {
       fullNameErrorField.text('Please enter a valid name.');
       fullNameInputField.css('border', '1px solid red');
     } else {
-      fullNameErrorField.text('');
-      fullNameInputField.css('border', '1px solid #656565');
+      restoreError(fullNameInputField, fullNameErrorField);
       isFullNameValid = true;
     }
   }
@@ -45,14 +83,12 @@ $(document).ready(() => {
     isEmailAddressValid = false;
 
     if (!emailAddress) {
-      emailAddressErrorField.text('This is a required field.');
-      emailAddressInputField.css('border', '1px solid red');
+      showRequiredFieldError(emailAddressInputField, emailAddressErrorField);
     } else if (!isEmail(emailAddress)) {
       emailAddressErrorField.text('Please enter a valid email address.');
       emailAddressInputField.css('border', '1px solid red');
     } else {
-      emailAddressErrorField.text('');
-      emailAddressInputField.css('border', '1px solid #656565');
+      restoreError(emailAddressInputField, emailAddressErrorField);
       isEmailAddressValid = true;
     }
   }
@@ -63,14 +99,12 @@ $(document).ready(() => {
     isContactNumberValid = false;
 
     if (!contactNumberString) {
-      contactNumberErrorField.text('This is a required field.');
-      contactNumberInputField.css('border', '1px solid red');
+      showRequiredFieldError(contactNumberInputField, contactNumberErrorField);
     } else if (contactNumberString.length < 8 || isNaN(contactNumber)) {
       contactNumberErrorField.text('Please enter a valid contact number.');
       contactNumberInputField.css('border', '1px solid red');
     } else {
-      contactNumberErrorField.text('');
-      contactNumberInputField.css('border', '1px solid #656565');
+      restoreError(contactNumberInputField, contactNumberErrorField);
       isContactNumberValid = true;
     }
   }
@@ -80,30 +114,20 @@ $(document).ready(() => {
     isCommentValid = false;
 
     if (!comment) {
-      commentErrorField.text('This is a required field.');
-      commentInputField.css('border', '1px solid red');
+      showRequiredFieldError(commentInputField, commentErrorField);
     } else if (comment.length < 10) {
       commentErrorField.text('Please enter at least 10 characters.');
       commentInputField.css('border', '1px solid red');
     } else {
-      commentErrorField.text('');
-      commentInputField.css('border', '1px solid #656565');
+      restoreError(commentInputField, commentErrorField);
       isCommentValid = true;
     }
   }
 
-  fullNameInputField.on('input', () => {
-    showFullNameError();
-  });
-  emailAddressInputField.on('input', () => {
-    showEmailAddressError();
-  });
-  contactNumberInputField.on('input', () => {
-    showContactNumberError();
-  });
-  commentInputField.on('input', () => {
-    showCommentError();
-  });
+  fullNameInputField.on('input', showFullNameError);
+  emailAddressInputField.on('input', showEmailAddressError);
+  contactNumberInputField.on('input', showContactNumberError);
+  commentInputField.on('input', showCommentError);
 
   $('#submit').click(() => {
     showFullNameError();
@@ -111,52 +135,17 @@ $(document).ready(() => {
     showContactNumberError();
     showCommentError();
 
+    let emailBody = commentInputField.val();
+
     const isFormValid =
       isFullNameValid &&
       isEmailAddressValid &&
       isContactNumberValid &&
       isCommentValid;
 
-    let comment = commentInputField.val();
-
+    // https://stackoverflow.com/questions/7977165/how-to-write-in-mailto-body-link-to-current-page
     if (isFormValid) {
-      // https://stackoverflow.com/questions/7977165/how-to-write-in-mailto-body-link-to-current-page
-      location.href = `mailto:?body=${comment}&to=emuel.vassallo.g52404@mcast.edu.mt`;
+      location.href = `mailto:?body=${emailBody}&to=emuel.vassallo.g52404@mcast.edu.mt`;
     }
   });
-
-  $(() => {
-    let sidebar = $('.sidebar');
-    let menuToggle = $('.open-menu, .menu-button, .site-overlay');
-    let overlay = $('.site-overlay');
-    let body = $('body');
-    menuToggle.on('click', () => {
-      sidebar.toggleClass('active');
-      $(() => {
-        if (sidebar.hasClass('active')) {
-          overlay.css('display', 'block');
-          body.css('overflow', 'hidden');
-        } else {
-          overlay.css('display', 'none');
-          body.css('overflow', 'visible');
-        }
-      });
-    });
-  });
-
-  $(() => {
-    let addToCartButton = $('.button-add-to-cart');
-    addToCartButton.on('click', () => {
-      alert('Product was added to cart.');
-    });
-  });
-
-  if ($('body.home-page').length) {
-    $('.carousel').flickity({
-      autoPlay: true,
-      contain: true,
-      wrapAround: true,
-      lazyLoad: true,
-    });
-  }
 });
