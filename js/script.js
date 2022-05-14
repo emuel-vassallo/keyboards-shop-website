@@ -1,9 +1,5 @@
-function addToCart() {
-  alert('Product was added to cart.');
-}
-
+// https://melvingeorge.me/blog/check-if-string-is-valid-email-address-javascript
 function isEmail(email) {
-  // https://melvingeorge.me/blog/check-if-string-is-valid-email-address-javascript
   let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
 }
@@ -151,6 +147,13 @@ $(document).ready(() => {
     overlay.on('click', () => {
       sidebar.toggleClass('active');
       toggleOverlay(sidebar, overlay, body);
+    });
+  });
+
+  $(() => {
+    let addToCartButton = $('.button-add-to-cart');
+    addToCartButton.on('click', () => {
+      alert('Product was added to cart.');
     });
   });
 
