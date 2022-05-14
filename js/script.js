@@ -121,6 +121,8 @@ $(document).ready(() => {
       isContactNumberValid &&
       isCommentValid;
 
+    let comment = commentInputField.val();
+
     if (isFormValid) {
       // https://stackoverflow.com/questions/7977165/how-to-write-in-mailto-body-link-to-current-page
       location.href = `mailto:?body=${comment}&to=emuel.vassallo.g52404@mcast.edu.mt`;
