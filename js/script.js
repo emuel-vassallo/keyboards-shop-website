@@ -125,28 +125,22 @@ $(document).ready(() => {
     }
   });
 
-  function toggleOverlay(sidebar, overlay, body) {
-    if (sidebar.hasClass('active')) {
-      overlay.css('display', 'block');
-      body.css('overflow', 'hidden');
-    } else {
-      overlay.css('display', 'none');
-      body.css('overflow', 'visible');
-    }
-  }
-
   $(() => {
     let sidebar = $('.sidebar');
+    let menuToggle = $('.open-menu, .menu-button, .site-overlay');
     let overlay = $('.site-overlay');
-    let menuButton = $('.open-menu, .menu-button');
     let body = $('body');
-    menuButton.on('click', () => {
+    menuToggle.on('click', () => {
       sidebar.toggleClass('active');
-      toggleOverlay(sidebar, overlay, body);
-    });
-    overlay.on('click', () => {
-      sidebar.toggleClass('active');
-      toggleOverlay(sidebar, overlay, body);
+      $(() => {
+        if (sidebar.hasClass('active')) {
+          overlay.css('display', 'block');
+          body.css('overflow', 'hidden');
+        } else {
+          overlay.css('display', 'none');
+          body.css('overflow', 'visible');
+        }
+      });
     });
   });
 
