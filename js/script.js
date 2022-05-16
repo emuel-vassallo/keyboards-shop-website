@@ -1,17 +1,4 @@
 $(document).ready(() => {
-  $('.button-add-to-cart').on('click', () => {
-    alert('Product was added to cart.');
-  });
-
-  if ($('body').hasClass('home-page')) {
-    $('.carousel').flickity({
-      autoPlay: true,
-      contain: true,
-      wrapAround: true,
-      lazyLoad: true,
-    });
-  }
-
   (() => {
     let sidebar = $('.sidebar');
     let overlay = $('.site-overlay');
@@ -29,6 +16,47 @@ $(document).ready(() => {
       }
     });
   })();
+
+  if ($('body').hasClass('home-page')) {
+    $('.carousel').flickity({
+      autoPlay: true,
+      contain: true,
+      wrapAround: true,
+      lazyLoad: true,
+    });
+  }
+
+  //https://github.com/Basir-PD/100-Projects-HTML-CSS-JavaScript/tree/master/6%20-%20How%20To%20Create%20a%20Modal%20Using%20HTML%2C%20CSS%20and%20JavaScript
+  const infoButtons = document.querySelectorAll('[data-target]');
+  const infoCloseButtons = document.querySelectorAll('.close-modal');
+  const overlay = document.getElementsByClassName('site-overlay')[0];
+
+  infoButtons.forEach((infoButton) => {
+    infoButton.addEventListener('click', () => {
+      document.querySelector(infoButton.dataset.target).classList.add('active');
+      overlay.classList.add('active');
+    });
+  });
+
+  infoCloseButtons.forEach((infoCloseButton) => {
+    infoCloseButton.addEventListener('click', () => {
+      const modal = infoCloseButton.closest('.modal');
+      modal.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  });
+
+  window.onclick = (event) => {
+    if (event.target == overlay) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach((modal) => modal.classList.remove('active'));
+      overlay.classList.remove('active');
+    }
+  };
+
+  $('.button-add-to-cart').on('click', () => {
+    alert('Product was added to cart.');
+  });
 
   const fullNameInputField = $('#fullName input');
   const fullNameErrorField = $('#fullName p');
