@@ -56,11 +56,6 @@ header {
   margin: 0;
 }
 
-.header-item.open-menu,
-button {
-  padding: 0;
-}
-
 #logo {
   justify-content: center;
 }
