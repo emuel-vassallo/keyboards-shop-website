@@ -4,19 +4,14 @@ $(document).ready(() => {
       autoPlay: true,
       contain: true,
       wrapAround: true,
-      lazyLoad: false,
+      lazyLoad: true,
     });
   }
 
-  (() => {
-    const sidebar = $('.sidebar');
-    const overlay = $('.site-overlay');
-
-    $('.open-menu, .menu-button').on('click', () => {
-      sidebar.toggleClass('active');
-      overlay.toggleClass('active');
-    });
-  })();
+  $('.menu-button').on('click', () => {
+    $('.sidebar').toggleClass('active');
+    $('.site-overlay').toggleClass('active');
+  });
 
   //https://github.com/Basir-PD/100-Projects-HTML-CSS-JavaScript/tree/master/6%20-%20How%20To%20Create%20a%20Modal%20Using%20HTML%2C%20CSS%20and%20JavaScript
   (() => {
