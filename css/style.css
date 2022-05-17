@@ -106,7 +106,7 @@ footer a {
 /* https://codepen.io/juwanpetty/pen/PPyJqJ */
 .sidebar {
   height: 100%;
-  width: 236px;
+  width: 250px;
   position: absolute;
   left: -350px;
   z-index: 1001;
@@ -126,7 +126,7 @@ footer a {
 .menu-button button {
   background: transparent;
   border: none;
-  padding: 36px 0 36px 42px;
+  padding: 36px 0 36px 60px;
 }
 
 .menu-links {
@@ -142,7 +142,7 @@ footer a {
 
 .menu-items {
   font-size: 15px;
-  padding-left: 42px;
+  padding-left: 60px;
 }
 
 .menu-items:hover {
@@ -454,6 +454,18 @@ nav li {
 
   #logo {
     font-size: 23px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .menu-button button {
+    padding-left: 22px;
+  }
+
+  .menu-items {
+    padding-left: 22px;
   }
 
   .categories {
