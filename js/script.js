@@ -11,7 +11,6 @@ $(document).ready(() => {
   (() => {
     const sidebar = $('.sidebar');
     const overlay = $('.site-overlay');
-    const body = $('body');
 
     $('.open-menu, .menu-button').on('click', () => {
       sidebar.toggleClass('active');
@@ -39,7 +38,6 @@ $(document).ready(() => {
         const modal = infoCloseButton.closest('.modal');
         modal.classList.remove('active');
         overlay.classList.remove('active');
-        ifelse;
       });
     });
   })();
