@@ -1,58 +1,48 @@
 $(document).ready(() => {
-  (() => {
-    let sidebar = $('.sidebar');
-    let overlay = $('.site-overlay');
-    let body = $('body');
-
-    $('.open-menu, .menu-button, .site-overlay').on('click', () => {
-      sidebar.toggleClass('active');
-
-      if (sidebar.hasClass('active')) {
-        overlay.css('display', 'block');
-        body.css('overflow', 'hidden');
-      } else {
-        overlay.css('display', 'none');
-        body.css('overflow', 'visible');
-      }
-    });
-  })();
-
   if ($('body').hasClass('home-page')) {
     $('.carousel').flickity({
       autoPlay: true,
       contain: true,
       wrapAround: true,
-      lazyLoad: true,
+      lazyLoad: false,
     });
   }
 
+  (() => {
+    const sidebar = $('.sidebar');
+    const overlay = $('.site-overlay');
+    const body = $('body');
+
+    $('.open-menu, .menu-button').on('click', () => {
+      sidebar.toggleClass('active');
+      overlay.toggleClass('active');
+    });
+  })();
+
   //https://github.com/Basir-PD/100-Projects-HTML-CSS-JavaScript/tree/master/6%20-%20How%20To%20Create%20a%20Modal%20Using%20HTML%2C%20CSS%20and%20JavaScript
-  const infoButtons = document.querySelectorAll('[data-target]');
-  const infoCloseButtons = document.querySelectorAll('.close-modal');
-  const overlay = document.getElementsByClassName('site-overlay')[0];
+  (() => {
+    const infoButtons = document.querySelectorAll('[data-target]');
+    const infoCloseButtons = document.querySelectorAll('.close-modal');
+    const overlay = document.getElementsByClassName('site-overlay')[0];
 
-  infoButtons.forEach((infoButton) => {
-    infoButton.addEventListener('click', () => {
-      document.querySelector(infoButton.dataset.target).classList.add('active');
-      overlay.classList.add('active');
+    infoButtons.forEach((infoButton) => {
+      infoButton.addEventListener('click', () => {
+        document
+          .querySelector(infoButton.dataset.target)
+          .classList.add('active');
+        overlay.classList.add('active');
+      });
     });
-  });
 
-  infoCloseButtons.forEach((infoCloseButton) => {
-    infoCloseButton.addEventListener('click', () => {
-      const modal = infoCloseButton.closest('.modal');
-      modal.classList.remove('active');
-      overlay.classList.remove('active');
+    infoCloseButtons.forEach((infoCloseButton) => {
+      infoCloseButton.addEventListener('click', () => {
+        const modal = infoCloseButton.closest('.modal');
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+        ifelse;
+      });
     });
-  });
-
-  window.onclick = (event) => {
-    if (event.target == overlay) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach((modal) => modal.classList.remove('active'));
-      overlay.classList.remove('active');
-    }
-  };
+  })();
 
   $('.button-add-to-cart').on('click', () => {
     alert('Product was added to cart.');
