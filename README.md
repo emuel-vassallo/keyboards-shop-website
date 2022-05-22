@@ -1,6 +1,6 @@
 # Website Design Home Assignment
 
-This assignment required us to create a website about a fictional company that offers any products or services using HTML, CSS, and JavaScript.
+This assignment required us to create a website about a fictional company that offers any products or services using HTML, CSS, JavaScript, and jQuery.
 
 It needed to include four pages: home, products/services, gallery, and contact.
 
