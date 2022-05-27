@@ -1,10 +1,14 @@
 # Website Design Home Assignment
 
+## Description
+
 This assignment required us to create a website about a fictional company that offers any products or services using HTML, CSS, JavaScript, and jQuery.
 
-It needed to include four pages: home, products/services, gallery, and contact.
+It had to include four pages: home, products/services, gallery, and contact.
 
-[View via GitHub](https://emuel-vassallo.github.io/keyboards-shop-website/)
+## Live Demo
+
+**Preview**: [here](https://emuel-vassallo.github.io/keyboards-shop-website/)
 
 ## Proposal
 
@@ -14,14 +18,22 @@ This is a store that offers mechanical keyboards, as well as a variety of relate
 
 ### Wireframes
 
-![](img/wireframes/home.png)
-![](img/wireframes/products.png)
-![](img/wireframes/gallery.png)
-![](img/wireframes/contact.png)
+|              Home               |             Products             |
+| :-----------------------------: | :------------------------------: |
+|  ![](img/wireframes/home.png)   | ![](img/wireframes/products.png) |
+|             Gallery             |             Contact              |
+| ![](img/wireframes/gallery.png) | ![](img/wireframes/contact.png)  |
 
-## What I Learnt
+## Technologies
 
-- How to use jQuery plugins to create different kinds of galleries.
-- How to create a sliding toggle menu with jQuery.
-- How to force an item to stay centered, despite each of it's children having different width.
-- How to change the styling for a link in a navigation bar relating to the current page.
+- HTML
+- CSS
+- JavaScript
+- jQuery
+
+## What I Learned
+
+- Using jQuery plugins to create different kinds of galleries.
+- Creating a sliding toggle menu with jQuery.
+- Force an item to stay centered, despite each of it's children having different width.
+- Changing the styling for a link in a navigation bar relating to the current page.
