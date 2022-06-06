@@ -6,6 +6,24 @@ This assignment required us to create a website about a fictional company that o
 
 It had to include four pages: home, products/services, gallery, and contact.
 
+## Showcase
+
+### Home
+
+![home page screenshot](img/screenshots/home.png)
+
+### Products
+
+![products page screenshot](img/screenshots/keyboards-page.png)
+
+### Gallery
+
+![gallery page screenshot](img/screenshots/gallery.png)
+
+### Contact
+
+![contact page screenshot](img/screenshots/contact.png)
+
 ## Live Demo
 
 **Preview**: [here](https://emuel-vassallo.github.io/keyboards-shop-website/)
